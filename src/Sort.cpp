@@ -8,7 +8,7 @@ bool Sort::is_sorted() const
 {
     for (int i = 0; i < m_array_rows; ++i)
     {
-        if ( !std::is_sorted( m_array[i], m_array[i]+m_array_length-1 ) )
+        if ( !std::is_sorted( m_array[i], m_array[i]+m_array_length ) )
         {
             std::cout << std::endl << "Nasza tablica NIE jest posortowana :(" << std::endl;
             return false;

@@ -6,7 +6,7 @@
 int main()
 {
     const int n = 10; //Ilość "wierszy"
-    const int nn = 100; //Ilość elementów naszych "wierszy"
+    const int nn = 10; //Ilość elementów naszych "wierszy"
 
     const double l = 0.5; //Stała do zmiany ilości posortowań na początku
 
@@ -21,12 +21,13 @@ int main()
         tablica[i] = new int [nn];
     }
 
-    /*Merge obiekt(tablica, n, nn);
+    Merge obiekt(tablica, n, nn);
     Quick obiekt_pom(tablica, n, nn, m);
     obiekt.set_values(1,5000000);
     for (int ind = 0; ind < n; ++ind)
     {
-        obiekt.merge_sort(0,l*nn-1, ind);
+        //obiekt.merge_sort(0,l*nn-1, ind);
+        obiekt_pom.quick_sort(0,nn-1,ind);
     }
     obiekt_pom.write_out_elem();
     clock_t a = clock();
@@ -35,7 +36,7 @@ int main()
         obiekt.merge_sort(0,nn-1, ind);
     }
     clock_t b = clock();
-    obiekt.is_sorted();*/
+    obiekt.is_sorted();
 
     /*Quick obiekt1(tablica, n, nn, r);
     obiekt1.set_values(1,5000000);
@@ -72,7 +73,7 @@ int main()
     //obiekt3.write_out_elem();
     obiekt3.is_sorted();*/
 
-    Heap obiekt2(tablica, n, nn);
+    /*Heap obiekt2(tablica, n, nn);
     obiekt2.set_values(1, 50);
     obiekt2.write_out_elem();
     clock_t a = clock();
@@ -83,7 +84,7 @@ int main()
     clock_t b = clock();
     std::cout << std::endl;
     obiekt2.write_out_elem();
-    obiekt2.is_sorted();
+    obiekt2.is_sorted();*/
 
     double x = static_cast<double>(b-a) / CLOCKS_PER_SEC;
     std::cout << std::endl << "Czas trwanie programu wynosi: " << x << std::endl;
